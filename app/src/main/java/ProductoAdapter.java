@@ -37,8 +37,10 @@ public class ProductoAdapter extends BaseAdapter {
         com.example.pablo.repasoandroid.Producto producto = (com.example.pablo.repasoandroid.Producto)getItem(position);
 
         TextView nombre_producto = (TextView)view.findViewById(R.id.textViewNombreProducto);
+        TextView id_imagen = (TextView)view.findViewById(R.id.textViewIdImagen);
 
         nombre_producto.setText(producto.getNombre());
+        id_imagen.setText(producto.getImagen().toString());
 
         return view;
     }

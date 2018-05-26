@@ -26,13 +26,14 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         listView = (ListView)findViewById(R.id.list_view_producto);
-        //celularId = (Integer)findViewById(R.id.)
+        celularId = this.getResources().getIdentifier("phone", "drawable", this.getPackageName());
+        tabletId = this.getResources().getIdentifier("tablet", "drawable", this.getPackageName());
 
         listaProductos = new ArrayList<>();
         listaProductos.add(new com.example.pablo.repasoandroid.Producto("Celular",
-                1500));
+                1500, celularId));
         listaProductos.add(new com.example.pablo.repasoandroid.Producto("Tablet",
-                2500));
+                2500, tabletId));
 
         myAdapter = new com.example.pablo.repasoandroid.ProductoAdapter(listaProductos);
         listView.setAdapter(myAdapter);

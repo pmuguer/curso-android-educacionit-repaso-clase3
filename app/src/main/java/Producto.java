@@ -3,12 +3,12 @@ package com.example.pablo.repasoandroid;
 public class Producto {
     private String nombre;
     private Integer precio;
-    //private Integer imagen;
+    private Integer imagen;
 
-    public Producto(String nombre, Integer precio) {
+    public Producto(String nombre, Integer precio, Integer imagen) {
         this.nombre = nombre;
         this.precio = precio;
-        //this.imagen = imagen;
+        this.imagen = imagen;
     }
 
     public String getNombre() {
@@ -19,7 +19,7 @@ public class Producto {
         return precio;
     }
 
-    //public Integer getImagen() {
-    //    return imagen;
-    //}
+    public Integer getImagen() {
+        return imagen;
+    }
 }
