@@ -16,6 +16,9 @@ public class Main3Activity extends AppCompatActivity {
     //private List<com.example.pablo.repasoandroid.Producto> productoList;
     private com.example.pablo.repasoandroid.ProductoAdapter myAdapter;
     private ArrayList listaProductos;
+    private Integer celularId;
+    private Integer tabletId;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +26,13 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         listView = (ListView)findViewById(R.id.list_view_producto);
+        //celularId = (Integer)findViewById(R.id.)
 
         listaProductos = new ArrayList<>();
-        listaProductos.add(new com.example.pablo.repasoandroid.Producto("Celular"));
-        listaProductos.add(new com.example.pablo.repasoandroid.Producto("Tablet"));
+        listaProductos.add(new com.example.pablo.repasoandroid.Producto("Celular",
+                1500));
+        listaProductos.add(new com.example.pablo.repasoandroid.Producto("Tablet",
+                2500));
 
         myAdapter = new com.example.pablo.repasoandroid.ProductoAdapter(listaProductos);
         listView.setAdapter(myAdapter);
