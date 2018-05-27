@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -38,9 +39,11 @@ public class ProductoAdapter extends BaseAdapter {
 
         TextView nombre_producto = (TextView)view.findViewById(R.id.textViewNombreProducto);
         TextView id_imagen = (TextView)view.findViewById(R.id.textViewIdImagen);
+        ImageView imagen = (ImageView)view.findViewById(R.id.imagen_producto);
 
         nombre_producto.setText(producto.getNombre());
         id_imagen.setText(producto.getImagen().toString());
+        imagen.setImageResource(producto.getImagen());
 
         return view;
     }

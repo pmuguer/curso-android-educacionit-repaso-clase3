@@ -27,8 +27,8 @@
         android:textSize="20sp"
         />
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/imagen_producto"
         android:src="@drawable/carrito"
         />
